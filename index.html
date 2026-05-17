@@ -1,1 +1,182 @@
-hallo
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GilangXD</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#111;
+      border-bottom:1px solid #222;
+      position:sticky;
+      top:0;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#00ffae;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#00ffae;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      background:linear-gradient(to bottom right,#111,#1b1b1b);
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:15px;
+    }
+
+    .hero span{
+      color:#00ffae;
+    }
+
+    .hero p{
+      max-width:600px;
+      color:#bdbdbd;
+      margin-bottom:25px;
+      line-height:1.6;
+    }
+
+    .btn{
+      padding:14px 28px;
+      background:#00ffae;
+      color:black;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      background:white;
+    }
+
+    .cards{
+      padding:70px 8%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#161616;
+      padding:25px;
+      border-radius:15px;
+      border:1px solid #252525;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#00ffae;
+    }
+
+    .card h2{
+      margin-bottom:10px;
+      color:#00ffae;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      background:#111;
+      border-top:1px solid #222;
+      color:#888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">GilangXD</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Project</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>WELCOME TO <span>GILANGXD</span></h1>
+
+    <p>
+      Website gaming keren dan simple.
+      Bisa dipakai untuk portofolio, komunitas game,
+      project coding, atau server kamu.
+    </p>
+
+    <a href="#" class="btn">START NOW</a>
+  </section>
+
+  <section class="cards">
+
+    <div class="card">
+      <h2>Gaming</h2>
+      <p>
+        Template modern dengan nuansa gaming dark neon.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Fast</h2>
+      <p>
+        Ringan dan cepat dibuka di HP maupun laptop.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Responsive</h2>
+      <p>
+        Tampilan otomatis menyesuaikan ukuran layar.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 GilangXD | All Rights Reserved
+  </footer>
+
+</body>
+</html>
