@@ -11,6 +11,7 @@
       padding:0;
       box-sizing:border-box;
       font-family:Arial, Helvetica, sans-serif;
+      scroll-behavior:smooth;
     }
 
     body{
@@ -29,6 +30,7 @@
       border-bottom:1px solid #222;
       position:sticky;
       top:0;
+      z-index:1000;
     }
 
     .logo{
@@ -48,6 +50,10 @@
       color:#00ffae;
     }
 
+    section{
+      padding:80px 8%;
+    }
+
     .hero{
       height:90vh;
       display:flex;
@@ -55,7 +61,6 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:20px;
       background:linear-gradient(to bottom right,#111,#1b1b1b);
     }
 
@@ -69,10 +74,10 @@
     }
 
     .hero p{
-      max-width:600px;
+      max-width:650px;
       color:#bdbdbd;
       margin-bottom:25px;
-      line-height:1.6;
+      line-height:1.7;
     }
 
     .btn{
@@ -90,8 +95,14 @@
       background:white;
     }
 
+    .title{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:40px;
+      color:#00ffae;
+    }
+
     .cards{
-      padding:70px 8%;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:20px;
@@ -115,6 +126,46 @@
       color:#00ffae;
     }
 
+    .about{
+      text-align:center;
+      line-height:1.8;
+      color:#cfcfcf;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .contact-box{
+      max-width:500px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .contact-box input,
+    .contact-box textarea{
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      background:#1b1b1b;
+      color:white;
+    }
+
+    .contact-box button{
+      padding:15px;
+      border:none;
+      border-radius:10px;
+      background:#00ffae;
+      color:black;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .contact-box button:hover{
+      background:white;
+    }
+
     footer{
       text-align:center;
       padding:25px;
@@ -122,54 +173,114 @@
       border-top:1px solid #222;
       color:#888;
     }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      nav{
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+      }
+
+      nav a{
+        margin-left:0;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
   <header>
+
     <div class="logo">GilangXD</div>
 
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Project</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#project">Project</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
-  <section class="hero">
+  <section class="hero" id="home">
+
     <h1>WELCOME TO <span>GILANGXD</span></h1>
 
     <p>
-      Website gaming keren dan simple.
-      Bisa dipakai untuk portofolio, komunitas game,
-      project coding, atau server kamu.
+      Website gaming modern dengan tampilan dark neon.
+      Cocok untuk portofolio, komunitas game,
+      project coding, maupun landing page server.
     </p>
 
-    <a href="#" class="btn">START NOW</a>
+    <a href="#project" class="btn">START NOW</a>
+
   </section>
 
-  <section class="cards">
+  <section id="project">
 
-    <div class="card">
-      <h2>Gaming</h2>
-      <p>
-        Template modern dengan nuansa gaming dark neon.
-      </p>
+    <h1 class="title">PROJECT</h1>
+
+    <div class="cards">
+
+      <div class="card">
+        <h2>Gaming</h2>
+        <p>
+          Desain modern dengan nuansa gaming futuristik.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Fast</h2>
+        <p>
+          Ringan dan cepat dibuka di semua device.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Responsive</h2>
+        <p>
+          Tampilan otomatis menyesuaikan layar HP maupun PC.
+        </p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h2>Fast</h2>
-      <p>
-        Ringan dan cepat dibuka di HP maupun laptop.
-      </p>
+  </section>
+
+  <section id="about">
+
+    <h1 class="title">ABOUT</h1>
+
+    <div class="about">
+      GilangXD adalah website bertema gaming dan coding
+      dengan desain simple, modern, dan elegan.
+      Dibuat menggunakan HTML dan CSS tanpa framework tambahan.
     </div>
 
-    <div class="card">
-      <h2>Responsive</h2>
-      <p>
-        Tampilan otomatis menyesuaikan ukuran layar.
-      </p>
+  </section>
+
+  <section id="contact">
+
+    <h1 class="title">CONTACT</h1>
+
+    <div class="contact-box">
+
+      <input type="text" placeholder="Nama">
+
+      <input type="email" placeholder="Email">
+
+      <textarea rows="5" placeholder="Pesan"></textarea>
+
+      <button>Kirim Pesan</button>
+
     </div>
 
   </section>
